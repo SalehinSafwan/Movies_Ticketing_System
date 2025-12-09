@@ -1,0 +1,6 @@
+    .root_pane{
+        -fx-background-image: url("../img/p1.jpg");
+        -fx-background-size: cover;
+        -fx-background-repeat: no-repeat;
+        -fx-background-position: default;
+    }
