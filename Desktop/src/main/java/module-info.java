@@ -11,6 +11,8 @@ module com.example.desktop {
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
     requires java.sql;
+    requires javafx.base;
+    requires javafx.graphics;
 
     opens com.example.desktop to javafx.fxml;
     exports com.example.desktop;

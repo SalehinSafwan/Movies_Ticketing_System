@@ -12,7 +12,6 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" style="-fx-background-image: img/P2.png;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.desktop.AdminDashboardController">
    <left>
       <AnchorPane prefHeight="650.0" prefWidth="347.0" style="-fx-background-color: #750b0b;" BorderPane.alignment="CENTER">
@@ -65,7 +64,7 @@
                   </RadialGradient>
                </textFill>
             </Label>
-            <Button layoutX="173.0" layoutY="194.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="280.0" style="-fx-background-color: olive; -fx-background-radius: 50px 50px 0px 0px;" text="Add Movies">
+            <Button layoutX="173.0" layoutY="194.0" mnemonicParsing="false" onAction="#Addmovie" prefHeight="58.0" prefWidth="280.0" style="-fx-background-color: olive; -fx-background-radius: 50px 50px 0px 0px;" text="Add Movies">
                <font>
                   <Font size="31.0" />
                </font>
@@ -128,7 +127,7 @@
                   </LinearGradient>
                </textFill>
             </Button>
-            <Button layoutX="178.0" layoutY="519.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="280.0" style="-fx-background-color: olive; -fx-background-radius: 0px 0px 50px 50px;" text="Add Admin">
+            <Button layoutX="178.0" layoutY="519.0" mnemonicParsing="false" onAction="#newAdmin" prefHeight="58.0" prefWidth="280.0" style="-fx-background-color: olive; -fx-background-radius: 0px 0px 50px 50px;" text="Add Admin">
                <font>
                   <Font size="31.0" />
                </font>
@@ -169,7 +168,7 @@
                   <Image url="@../../../img/admin.png" />
                </image>
             </ImageView>
-            <Button layoutX="535.0" layoutY="585.0" mnemonicParsing="false" style="-fx-background-color: brown; -fx-background-radius: 100px;" text="Log Out" AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="35.0">
+            <Button layoutX="535.0" layoutY="585.0" mnemonicParsing="false" onAction="#Logout" style="-fx-background-color: brown; -fx-background-radius: 100px;" text="Log Out" AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="35.0">
                <font>
                   <Font size="17.0" />
                </font>

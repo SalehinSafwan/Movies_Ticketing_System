@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.desktop.AddmovieController">
+   <content>
+      <AnchorPane prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: Teal;">
+         <children>
+            <Label alignment="CENTER" layoutX="359.0" layoutY="37.0" prefHeight="100.0" prefWidth="282.0" style="-fx-background-color: black;" text="Information">
+               <font>
+                  <Font name="System Bold Italic" size="45.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.20142180094786732" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+            <Label alignment="CENTER" layoutX="102.0" layoutY="172.0" prefHeight="57.0" prefWidth="177.0" style="-fx-background-color: black;" text="MOVIE TITLE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.5118483412322274" startY="0.5781990521327014">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.75" green="0.2777777910232544" blue="0.2777777910232544" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <TextField fx:id="title" layoutX="317.0" layoutY="183.0" prefHeight="35.0" prefWidth="505.0" />
+            <Label alignment="CENTER" layoutX="102.0" layoutY="309.0" prefHeight="57.0" prefWidth="177.0" style="-fx-background-color: black;" text="GENRE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.5734597156398104" startY="0.5781990521327014">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.75" green="0.2849999964237213" blue="0.2849999964237213" opacity="0.7137404680252075" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.006711409395973154">
+                           <color>
+                              <Color red="0.75" green="0.2849999964237213" blue="0.2849999964237213" opacity="0.7137404680252075" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.674496644295302">
+                           <color>
+                              <Color red="0.7846666574478149" green="0.8799999952316284" blue="0.651199996471405" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.7846460938453674" green="0.8815789222717285" blue="0.6489400863647461" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <ComboBox fx:id="genre" layoutX="317.0" layoutY="325.0" prefHeight="27.0" prefWidth="276.0" />
+            <Label alignment="CENTER" layoutX="102.0" layoutY="438.0" prefHeight="57.0" prefWidth="177.0" style="-fx-background-color: black;" text="Release Date">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.5734597156398104" startY="0.5781990521327014">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.75" green="0.2849999964237213" blue="0.2849999964237213" opacity="0.7137404680252075" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.006711409395973154">
+                           <color>
+                              <Color red="0.75" green="0.2849999964237213" blue="0.2849999964237213" opacity="0.7137404680252075" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.674496644295302">
+                           <color>
+                              <Color red="0.7846666574478149" green="0.8799999952316284" blue="0.651199996471405" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.7846460938453674" green="0.8815789222717285" blue="0.6489400863647461" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <DatePicker fx:id="releaseDate" layoutX="310.0" layoutY="454.0" prefHeight="33.0" prefWidth="265.0" />
+            <Label alignment="CENTER" layoutX="102.0" layoutY="555.0" prefHeight="57.0" prefWidth="177.0" style="-fx-background-color: black;" text="Duration">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.5734597156398104" startY="0.5781990521327014">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.75" green="0.2849999964237213" blue="0.2849999964237213" opacity="0.7137404680252075" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.006711409395973154">
+                           <color>
+                              <Color red="0.75" green="0.2849999964237213" blue="0.2849999964237213" opacity="0.7137404680252075" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.674496644295302">
+                           <color>
+                              <Color red="0.7846666574478149" green="0.8799999952316284" blue="0.651199996471405" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.7846460938453674" green="0.8815789222717285" blue="0.6489400863647461" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <TextField fx:id="duration" layoutX="310.0" layoutY="566.0" prefHeight="33.0" prefWidth="71.0" />
+            <Button layoutX="437.0" layoutY="680.0" mnemonicParsing="false" onAction="#AddMovie" prefHeight="34.0" prefWidth="126.0" style="-fx-background-color: black;" text="ADD">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.4502369668246445" startY="0.36492890995260663">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.6052631735801697" green="0.09247075766324997" blue="0.09247075766324997" opacity="0.7099999785423279" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.1006711409395973">
+                           <color>
+                              <Color red="0.6052631735801697" green="0.09247075766324997" blue="0.09247075766324997" opacity="0.7099999785423279" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.5771812080536912">
+                           <color>
+                              <Color red="0.7846666574478149" green="0.8799999952316284" blue="0.651199996471405" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.7846460938453674" green="0.8815789222717285" blue="0.6489400863647461" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button layoutX="876.0" layoutY="62.0" mnemonicParsing="false" onAction="#backDashboard" style="-fx-background-color: black;" text="Return">
+               <font>
+                  <Font name="System Italic" size="17.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.8204419889502762" centerY="0.2109004739336493" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.8552631735801697" green="0.03563596308231354" blue="0.03563596308231354" opacity="0.7099999785423279" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.6798780487804877">
+                           <color>
+                              <Color red="0.8289473652839661" green="0.7944079041481018" blue="0.7944079041481018" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.8289473652839661" green="0.7944079041481018" blue="0.7944079041481018" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Button>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>
