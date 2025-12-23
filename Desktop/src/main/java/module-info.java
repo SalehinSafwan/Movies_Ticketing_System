@@ -13,6 +13,8 @@ module com.example.desktop {
     requires java.sql;
     requires javafx.base;
     requires javafx.graphics;
+    requires mysql.connector.j;
+    requires com.fasterxml.jackson.databind;
 
     opens com.example.desktop to javafx.fxml;
     exports com.example.desktop;

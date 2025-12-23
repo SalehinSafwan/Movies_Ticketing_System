@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/25" fx:controller="com.example.desktop.RevenueViewerController">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.desktop.RevenueViewerController">
   <content>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="850.0" prefWidth="1100.0">
+         <children>
+            <TableView layoutX="67.0" layoutY="107.0" prefHeight="641.0" prefWidth="906.0" style="-fx-background-color: teal;">
+              <columns>
+                <TableColumn prefWidth="249.0" text="Date" />
+                <TableColumn prefWidth="320.0" text="REVENUE" />
+                  <TableColumn prefWidth="336.0" text="CANCELLATION LOSS" />
+              </columns>
+            </TableView>
+            <Label alignment="CENTER" layoutX="393.0" layoutY="44.0" prefHeight="47.0" prefWidth="255.0" style="-fx-background-color: teal;" text="REVENUE SUMMARY">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
   </content>
 </ScrollPane>
