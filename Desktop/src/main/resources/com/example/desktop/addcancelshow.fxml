@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1000.0" style="-fx-background-color: #4F9A6A;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.desktop.AddCancelShowController">
+   <children>
+      <ComboBox fx:id="movieComboBox" layoutX="414.0" layoutY="195.0" prefHeight="37.0" prefWidth="438.0" promptText="Select a movie..." />
+      <Label alignment="CENTER" layoutX="159.0" layoutY="198.0" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #5C85C3;" text="Movie" textFill="#154970">
+         <font>
+            <Font name="Calibri Bold Italic" size="28.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="159.0" layoutY="279.0" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #5C85C3;" text="Theatre" textFill="#154970">
+         <font>
+            <Font name="Calibri Bold Italic" size="28.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="theatreComboBox" layoutX="414.0" layoutY="277.0" prefHeight="36.0" prefWidth="257.0" promptText="Select a theatre..." />
+      <Label alignment="CENTER" layoutX="159.0" layoutY="362.0" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #5C85C3;" text="Date" textFill="#154970">
+         <font>
+            <Font name="Calibri Bold Italic" size="28.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="datePicker" layoutX="412.0" layoutY="363.0" prefHeight="30.0" prefWidth="261.0" promptText="Pick a date..." />
+      <Label alignment="CENTER" layoutX="159.0" layoutY="440.0" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #5C85C3;" text="Time" textFill="#154970">
+         <font>
+            <Font name="Calibri Bold Italic" size="28.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="timeComboBox" layoutX="594.0" layoutY="436.0" prefHeight="36.0" prefWidth="258.0" promptText="Pick a time.." />
+      <Button layoutX="446.0" layoutY="502.0" mnemonicParsing="false" onAction="#AddShow" prefHeight="45.0" prefWidth="129.0" style="-fx-background-color: #0B98B1;" text="ADD" textFill="#154970">
+         <font>
+            <Font name="Calibri Bold Italic" size="28.0" />
+         </font>
+      </Button>
+      <Button layoutX="446.0" layoutY="686.0" mnemonicParsing="false" onAction="#CancelShow" prefHeight="45.0" prefWidth="129.0" style="-fx-background-color: #6B1A06;" text="CANCEL" textFill="#3e96c2">
+         <font>
+            <Font name="Calibri Bold Italic" size="28.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" layoutX="288.0" layoutY="71.0" prefHeight="50.0" prefWidth="421.0" text="ADD/CANCEL SHOWS" textOverrun="WORD_ELLIPSIS" underline="true">
+         <font>
+            <Font name="System Bold" size="39.0" />
+         </font>
+      </Label>
+      <Button layoutX="852.0" layoutY="33.0" mnemonicParsing="false" onAction="#Back" prefHeight="32.0" prefWidth="88.0" style="-fx-background-color: #8da8a1;" text="RETURN">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <TextField fx:id="newTimeField" layoutX="412.0" layoutY="442.0" promptText="Add a new time.." />
+      <Label alignment="CENTER" layoutX="104.0" layoutY="599.0" prefHeight="38.0" prefWidth="261.0" style="-fx-background-color: #5C85C3;" text="Cancellable Shows" textFill="#154970">
+         <font>
+            <Font name="Calibri Bold Italic" size="28.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cancelshowcombo" layoutX="414.0" layoutY="600.0" prefHeight="37.0" prefWidth="438.0" promptText="Select an option" />
+   </children>
+</AnchorPane>

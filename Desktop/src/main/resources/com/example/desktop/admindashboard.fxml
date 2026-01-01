@@ -16,9 +16,9 @@
    <left>
       <AnchorPane prefHeight="650.0" prefWidth="347.0" style="-fx-background-color: #750b0b;" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="38.0" layoutY="276.0" prefHeight="99.0" prefWidth="272.0" style="-fx-background-color: #ae5151; -fx-background-radius: 10px;" text="Dashboard" AnchorPane.bottomAnchor="275.0" AnchorPane.topAnchor="276.0">
+            <Label layoutX="38.0" layoutY="276.0" prefHeight="99.0" prefWidth="272.0" style="-fx-background-color: #ae5151; -fx-background-radius: 10px;" text="DASHBOARD" AnchorPane.bottomAnchor="275.0" AnchorPane.topAnchor="276.0">
                <font>
-                  <Font size="55.0" />
+                  <Font size="45.0" />
                </font>
                <textFill>
                   <LinearGradient endX="1.0" endY="1.0">
@@ -43,7 +43,7 @@
    <center>
       <AnchorPane prefHeight="650.0" prefWidth="659.0" style="-fx-background-color: #1a4b6b;" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" layoutX="225.0" layoutY="51.0" prefHeight="76.0" prefWidth="186.0" style="-fx-background-color: olive; -fx-background-radius: 50% 25% 25% 10%;" text="Options">
+            <Label alignment="CENTER" layoutX="225.0" layoutY="51.0" prefHeight="76.0" prefWidth="186.0" style="-fx-background-color: olive; -fx-background-radius: 50% 25% 25% 10%;" text="OPTIONS">
                <font>
                   <Font size="40.0" />
                </font>
@@ -85,9 +85,9 @@
                   </LinearGradient>
                </textFill>
             </Button>
-            <Button layoutX="173.0" layoutY="306.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="280.0" style="-fx-background-color: olive; -fx-background-radius: 0px 50px 0px 50px;" text="Cancel Show">
+            <Button layoutX="173.0" layoutY="306.0" mnemonicParsing="false" onAction="#AddCancel" prefHeight="58.0" prefWidth="280.0" style="-fx-background-color: olive; -fx-background-radius: 0px 50px 0px 50px;" text="Add/Cancel Show">
                <font>
-                  <Font size="31.0" />
+                  <Font size="29.0" />
                </font>
                <textFill>
                   <LinearGradient endX="1.0" endY="1.0">
@@ -106,7 +106,7 @@
                   </LinearGradient>
                </textFill>
             </Button>
-            <Button layoutX="178.0" layoutY="415.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="280.0" style="-fx-background-color: olive; -fx-background-radius: 50px 0px 50px 0px;" text="View Revenue">
+            <Button layoutX="178.0" layoutY="415.0" mnemonicParsing="false" onAction="#Revenue" prefHeight="58.0" prefWidth="280.0" style="-fx-background-color: olive; -fx-background-radius: 50px 0px 50px 0px;" text="View Revenue">
                <font>
                   <Font size="31.0" />
                </font>

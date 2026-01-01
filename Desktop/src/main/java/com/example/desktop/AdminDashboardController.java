@@ -25,7 +25,9 @@ public class AdminDashboardController {
 
 
 
+    @FXML void Revenue(ActionEvent event) {go(event, "viewrevenue.fxml", 1100, 850, "Revenue Details");}
 
+    @FXML void AddCancel(ActionEvent event) { go(event, "addcancelshow.fxml", 1000, 750, "Edit Showtimes"); }
 
     @FXML void newAdmin(ActionEvent event) {
         go(event, "newadmin.fxml", 800, 600, "New Admin Registration");

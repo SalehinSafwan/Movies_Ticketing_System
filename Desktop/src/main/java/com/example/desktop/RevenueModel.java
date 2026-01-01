@@ -2,10 +2,10 @@ package com.example.desktop;
 
 public class RevenueModel {
     private final String date;
-    private final Double revenue;
-    private final Double cancellationloss;
+    private final Integer revenue;
+    private final Integer cancellationloss;
 
-    public RevenueModel(String date, Double revenue, Double cancellationloss) {
+    public RevenueModel(String date, Integer revenue, Integer cancellationloss) {
         this.date = date;
         this.revenue = revenue;
         this.cancellationloss = cancellationloss;
@@ -15,11 +15,11 @@ public class RevenueModel {
         return date;
     }
 
-    public Double getRevenue() {
+    public Integer getRevenue() {
         return revenue;
     }
 
-    public Double getCancellationloss() {
+    public Integer getCancellationloss() {
         return cancellationloss;
     }
 }
