@@ -1,0 +1,50 @@
+.root {
+    -fx-background-color: linear-gradient(to bottom, #0d1b2a, #1b263b);
+}
+
+.top-bar {
+    -fx-background-color: #1b263b;
+}
+
+.title-label {
+    -fx-text-fill: #97c561;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+.scroll-pane {
+    -fx-background: transparent;
+}
+
+.flow-pane {
+    -fx-background-color: transparent;
+}
+
+.movie-card {
+    -fx-background-color: #1b263b;
+    -fx-border-color: #97c561;
+    -fx-border-width: 2;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-padding: 15;
+    -fx-pref-width: 250;
+    -fx-pref-height: 420;
+}
+
+.movie-title {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.movie-info {
+    -fx-text-fill: #d9d9d9;
+    -fx-font-size: 14px;
+}
+
+.nav-button {
+    -fx-background-color: #97c561;
+    -fx-text-fill: #0d1b2a;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+}

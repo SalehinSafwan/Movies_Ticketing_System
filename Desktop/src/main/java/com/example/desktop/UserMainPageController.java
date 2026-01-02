@@ -3,9 +3,11 @@ package com.example.desktop;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.TilePane;
 import javafx.scene.layout.VBox;
 
@@ -76,12 +78,12 @@ public class UserMainPageController {
                 poster.setImage(new Image(posterUrl, true));
             } else if (posterPath != null && !posterPath.isEmpty()) {
                 poster.setImage(new Image(getClass().getResource(posterPath).toExternalForm()));
-                
+
             } else {
-                // HOYnai alert dekhao
+               showAlert(Alert.AlertType.WARNING, "Link Error", "No link found for poster"+ title);
             }
         } catch (Exception e) {
-           //Again, hoynai!!
+           showAlert(Alert.AlertType.ERROR, "Poster Error", "Failed to load poster for " + title);
         }
 
 
@@ -94,6 +96,26 @@ public class UserMainPageController {
 
     }
 
+    private void showAlert(Alert.AlertType alertType, String title, String message) {
+        Alert alert = new Alert(alertType);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+    }
+
+    @FXML void showtimes(MouseEvent event) {gg(event, "showtimespage.fxml", 1300, 900, "SHOWTIMES");}
 
     @FXML void login(ActionEvent event) {go(event, "loginpage.fxml", 800, 600, "ADMINISTRATION LOGIN");}
+
+    private void gg(MouseEvent event, String fxml, Integer width, Integer height, String message) {
+        try {
+            javafx.scene.Parent root = javafx.fxml.FXMLLoader.load(getClass().getResource(fxml));
+            javafx.stage.Stage stage = (javafx.stage.Stage)((javafx.scene.Node)event.getSource()).getScene().getWindow();
+            stage.setScene(new javafx.scene.Scene(root, width,height));
+            stage.setTitle(message);
+            stage.show();
+        }
+        catch (Exception e) {e.printStackTrace();}
+    }
 }
