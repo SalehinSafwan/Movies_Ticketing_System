@@ -17,7 +17,7 @@
             <HBox.margin>
                <Insets right="30.0" />
             </HBox.margin></Label>
-            <Label text="Buy Tickets">
+            <Label onMouseClicked="#buyTickets" text="Buy Tickets">
             <HBox.margin>
                <Insets right="30.0" />
             </HBox.margin></Label>

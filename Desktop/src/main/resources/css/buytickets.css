@@ -1,0 +1,70 @@
+#bpane {
+    -fx-background-color: linear-gradient(to bottom, #0d1b2a, #1b263b);
+}
+.root{
+    -fx-background-color: linear-gradient(to bottom, #0d1b2a, #1b263b);
+}
+
+.top-bar {
+    -fx-background-color: #1b263b;
+}
+
+.title-label {
+    -fx-text-fill: #00b4d8; /* teal accent */
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+.form-label {
+    -fx-text-fill: #e0e0e0;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.theatre-label {
+    -fx-text-fill: #caf0f8;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.seat-free {
+    -fx-background-color: #90ee90; /* light green */
+    -fx-text-fill: black;
+    -fx-pref-width: 60;
+}
+
+.seat-booked {
+    -fx-background-color: #ff6b6b; /* red */
+    -fx-text-fill: white;
+    -fx-pref-width: 60;
+}
+
+.seat-selected {
+    -fx-background-color: #00b4d8; /* teal */
+    -fx-text-fill: white;
+    -fx-pref-width: 80;
+}
+
+.summary-box {
+    -fx-background-color: #1b263b;
+    -fx-border-color: #00b4d8;
+    -fx-border-width: 2;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-padding: 10;
+}
+
+.total-label {
+    -fx-text-fill: #00b4d8;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.buy-button {
+    -fx-background-color: #00b4d8;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-pref-width: 200;
+    -fx-pref-height: 40;
+}

@@ -1,0 +1,33 @@
+.root {
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.receipt-box {
+    -fx-background-color: rgba(0, 0, 0, 0.6); /* semi-transparent overlay */
+    -fx-background-radius: 15;
+    -fx-padding: 20;
+}
+
+.receipt-title {
+    -fx-text-fill: #00b4d8; /* teal accent */
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+}
+
+.info-label {
+    -fx-text-fill: #caf0f8;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.info-value {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+
+.thankyou-label {
+    -fx-text-fill: #90ee90; /* light green */
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 15 0 0 0;
+}

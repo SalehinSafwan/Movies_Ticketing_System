@@ -1,5 +1,6 @@
 package com.example.desktop;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
@@ -83,5 +84,20 @@ public class ShowtimesController {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    private void go(ActionEvent event, String fxml, Integer width, Integer height, String message) {
+        try {
+            javafx.scene.Parent root = javafx.fxml.FXMLLoader.load(getClass().getResource(fxml));
+            javafx.stage.Stage stage = (javafx.stage.Stage)((javafx.scene.Node)event.getSource()).getScene().getWindow();
+            stage.setScene(new javafx.scene.Scene(root, width,height));
+            stage.setTitle(message);
+            stage.show();
+        }
+        catch (Exception e) {e.printStackTrace();}
+    }
+
+    @FXML void Return(ActionEvent event) {
+        go(event, "usermainpage.fxml", 760, 915, "Movies Ticketing System");
     }
 }

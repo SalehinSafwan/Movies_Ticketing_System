@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="600" prefWidth="800" stylesheets="@../../../css/receipt.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/25" fx:controller="com.example.desktop.ReceiptController">
+
+    <center>
+        <StackPane>
+            <ImageView fx:id="backgroundImage" fitHeight="600" fitWidth="800" preserveRatio="true">
+            <image>
+               <Image url="@../../../img/p1.jpg" />
+            </image></ImageView>
+            <VBox alignment="CENTER" spacing="15" styleClass="receipt-box">
+                <padding>
+                    <Insets bottom="30" left="30" right="30" top="30" />
+                </padding>
+
+                <Label styleClass="receipt-title" text="Ticket Receipt" />
+
+                <GridPane alignment="CENTER" hgap="15" vgap="10">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="RIGHT" />
+                        <ColumnConstraints halignment="LEFT" />
+                    </columnConstraints>
+
+                    <Label styleClass="info-label" text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                    <Label fx:id="nameLabel" styleClass="info-value" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                    <Label styleClass="info-label" text="Movie:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                    <Label fx:id="movieLabel" styleClass="info-value" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                    <Label styleClass="info-label" text="Date:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                    <Label fx:id="dateLabel" styleClass="info-value" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                    <Label styleClass="info-label" text="Showtime:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                    <Label fx:id="showtimeLabel" styleClass="info-value" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                    <Label styleClass="info-label" text="Seats:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                    <Label fx:id="seatsLabel" styleClass="info-value" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                    <Label styleClass="info-label" text="Total Price:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                    <Label fx:id="priceLabel" styleClass="info-value" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                    <Label styleClass="info-label" text="PNR:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                    <Label fx:id="pnrLabel" styleClass="info-value" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+                    <Label styleClass="info-label" text="Purchased At:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+                    <Label fx:id="purchaseTimeLabel" styleClass="info-value" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+                </GridPane>
+                
+                <Label styleClass="thankyou-label" text="Thank you for purchasing and staying with us!" wrapText="true" />
+
+            </VBox>
+        </StackPane>
+    </center>
+</BorderPane>

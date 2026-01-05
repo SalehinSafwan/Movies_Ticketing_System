@@ -31,7 +31,7 @@
 
     <bottom>
         <HBox alignment="BOTTOM_LEFT" prefHeight="60" styleClass="bottom-bar">
-            <Button styleClass="nav-button" text="RETURN" />
+            <Button onAction="#Return" styleClass="nav-button" text="RETURN" />
             <padding>
                 <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
             </padding>
