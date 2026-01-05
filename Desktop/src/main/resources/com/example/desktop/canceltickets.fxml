@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="400" prefWidth="600" stylesheets="@../../../css/cancelticket.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/25" fx:controller="com.example.desktop.CancelTicketController">
+
+
+    <top>
+        <HBox alignment="CENTER" prefHeight="60" styleClass="top-bar">
+            <Label styleClass="title-label" text="Cancel Tickets" />
+        </HBox>
+    </top>
+
+
+    <center>
+        <VBox alignment="CENTER" spacing="20">
+
+            <padding>
+                <Insets bottom="30" left="30" right="30" top="30" />
+            </padding>
+
+            <HBox alignment="CENTER_LEFT" spacing="15">
+                <Label styleClass="form-label" text="Username:" />
+                <TextField fx:id="usernameField" prefWidth="200" promptText="Exact name given in purchase" />
+            </HBox>
+
+
+            <HBox alignment="CENTER_LEFT" spacing="15">
+                <Label prefHeight="18.0" prefWidth="70.0" styleClass="form-label" text="PNR:" />
+                <TextField fx:id="pnrField" prefWidth="200" promptText="PNR from receipt" />
+            </HBox>
+
+
+            <HBox alignment="CENTER_LEFT" spacing="15">
+                <Label styleClass="form-label" text="Show Date:" />
+                <DatePicker fx:id="datePicker" />
+            </HBox>
+
+            <Button fx:id="cancelButton" styleClass="cancel-button" text="Cancel Ticket" />
+         <Button mnemonicParsing="false" onAction="#Home" style="-fx-background-color: teal;" text="HOME">
+            <VBox.margin>
+               <Insets right="450.0" />
+            </VBox.margin>
+         </Button>
+
+        </VBox>
+    </center>
+</BorderPane>
