@@ -14,6 +14,7 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 import java.sql.*;
+import java.sql.Date;
 import java.time.LocalDate;
 import java.util.*;
 
@@ -94,6 +95,8 @@ public class BuyTicketsController extends ReceiptController{
 
     private void resetBookingSummary() {
         bookingTable.getItems().clear();
+        bookingTable.setPrefHeight(200); bookingTable.setPrefWidth(400);
+        seatColumn.setPrefWidth(405); priceColumn.setPrefWidth(530);
         selectedShowtimeSeatIds.clear();
         totalPrice = 0;
         totalPriceLabel.setText("Total: 0");
@@ -287,6 +290,20 @@ int tp =0;
             }
 
             conn.commit();
+
+            final String sql = """
+        INSERT INTO revenue (Date, `Total Revenue`)
+        VALUES (?, ?)
+        ON DUPLICATE KEY UPDATE `Total Revenue` = `Total Revenue` + VALUES(`Total Revenue`)
+        """;
+
+            try (PreparedStatement ps = conn.prepareStatement(sql)) {
+                ps.setDate(1, Date.valueOf(datePicker.getValue()));
+                ps.setInt(2, totalPrice);
+                ps.executeUpdate();
+            }
+            conn.commit();
+
             showAlert("Purchase confirmed for " + username + ". Total: " + totalPrice);
             tp = totalPrice;
             resetBookingSummary();

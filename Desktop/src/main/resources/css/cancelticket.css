@@ -1,0 +1,35 @@
+.root {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-background-color: linear-gradient(to bottom, #0d1b2a, #1b263b);
+}
+
+.top-bar {
+    -fx-background-color: #1b263b;
+}
+
+.title-label {
+    -fx-text-fill: #00b4d8;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+.form-label {
+    -fx-text-fill: #e0e0e0;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.cancel-button {
+    -fx-background-color: #ff6b6b;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-pref-width: 150;
+    -fx-pref-height: 40;
+}
+
+.result-label {
+    -fx-text-fill: #caf0f8;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
