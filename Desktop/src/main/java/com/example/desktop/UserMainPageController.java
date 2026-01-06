@@ -107,6 +107,7 @@ public class UserMainPageController {
     @FXML void showtimes(MouseEvent event) {gg(event, "showtimespage.fxml", 1300, 900, "SHOWTIMES");}
     @FXML void buyTickets(MouseEvent event){ gg(event, "buytickets.fxml", 1000, 700, "BUY TICKETS");}
     @FXML void CancelTicket(MouseEvent event){ gg(event, "canceltickets.fxml", 600, 400, "CANCEL TICKETS");}
+    @FXML void verifyTickets(MouseEvent event){ gg(event, "verifytickets.fxml", 600, 400, "VERIFY TICKETS");}
 
     @FXML void login(ActionEvent event) {go(event, "loginpage.fxml", 800, 600, "ADMINISTRATION LOGIN");}
 

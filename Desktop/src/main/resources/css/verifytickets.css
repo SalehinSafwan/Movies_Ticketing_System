@@ -1,0 +1,42 @@
+.root {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-background-color: linear-gradient(to bottom, #14213d, #1b263b);
+}
+
+.top-bar {
+    -fx-background-color: #1b263b;
+}
+
+.title-label {
+    -fx-text-fill: #fca311;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.form-label {
+    -fx-text-fill: #e0e0e0;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.verify-button {
+    -fx-background-color: #00b4d8;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-pref-width: 120;
+    -fx-pref-height: 35;
+}
+
+.back-button {
+    -fx-background-color: #ff6b6b;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-pref-width: 120;
+    -fx-pref-height: 35;
+}
+
+.button:hover {
+    -fx-opacity: 0.65;
+}
