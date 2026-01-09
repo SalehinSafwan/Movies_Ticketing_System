@@ -6,6 +6,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -43,7 +45,14 @@
             <Button fx:id="button" layoutX="157.0" layoutY="284.0" mnemonicParsing="false" onAction="#Verify" style="-fx-background-color: lightgreen;" text="Proceed">
                <cursor>
                   <Cursor fx:constant="HAND" />
-               </cursor></Button>
+               </cursor>
+               <effect>
+                  <Reflection fraction="1.0" topOpacity="0.51">
+                     <input>
+                        <DropShadow height="12.21" radius="7.8025" spread="0.46" />
+                     </input>
+                  </Reflection>
+               </effect></Button>
             <Label layoutX="20.0" layoutY="345.0" prefHeight="42.0" prefWidth="313.0" style="-fx-background-color: e3b378; -fx-border-width: 2px; -fx-border-color: green; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Forgot password? STOP TRESPASSING!" AnchorPane.bottomAnchor="13.0">
                <font>
                   <Font size="17.0" />

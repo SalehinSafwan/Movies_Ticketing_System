@@ -7,8 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
@@ -34,6 +33,11 @@ public class RevenueViewerController {
     @FXML private TableColumn<RevenueModel, String> dateColumn;
     @FXML private TableColumn<RevenueModel, Integer> revenueColumn;
     @FXML private TableColumn<RevenueModel, Integer> lossColumn;
+    @FXML private DatePicker datePicker;
+    @FXML private RadioButton upto, from;
+
+    @FXML private TextField minrevenue,maxrevenue;
+    @FXML private Button filterButton, ResetButton;
 
     @FXML private final ObservableList<RevenueModel> revenuelist = FXCollections.observableArrayList();
 
@@ -43,6 +47,75 @@ public class RevenueViewerController {
         lossColumn.setCellValueFactory(new PropertyValueFactory<>("cancellationloss"));
 
         loadRevenueData();
+
+
+
+
+        filterButton.setOnAction(event -> applyFilters());
+        ResetButton.setOnAction(event -> resetFilters());
+
+        minrevenue.setTextFormatter(new TextFormatter<>(change -> {
+            if(change.getText().matches("[0-9]*")) return change;
+            return null;
+        }));
+        maxrevenue.setTextFormatter(new TextFormatter<>(change -> {
+            if(change.getText().matches("[0-9]*")) return change;
+            return null;
+        }));
+    }
+
+    private void resetFilters() {
+        datePicker.setValue(null);
+        upto.setSelected(false);
+        from.setSelected(false);
+        minrevenue.clear();
+        maxrevenue.clear();
+        revenuelist.clear();
+
+        loadRevenueData();
+    }
+
+    private void applyFilters() {
+        revenuelist.clear();
+
+        StringBuilder sql = new StringBuilder("SELECT `Date`, `Total Revenue`, `Cancellation Loss` FROM revenue WHERE 1=1 ");
+        if (datePicker.getValue() != null) {
+            Date selectedDate = Date.valueOf(datePicker.getValue());
+            if (upto.isSelected()) {
+                from.setSelected(false);
+                sql.append("AND `Date` <= '").append(selectedDate).append("' ");
+            } else if (from.isSelected()) {
+                sql.append("AND `Date` >= '").append(selectedDate).append("' ");
+            }
+        }
+
+        try {
+            if (!minrevenue.getText().isBlank()) {
+                int min = Integer.parseInt(minrevenue.getText());
+                sql.append("AND `Total Revenue` >= ").append(min).append(" ");
+            }
+            if (!maxrevenue.getText().isBlank()) {
+                int max = Integer.parseInt(maxrevenue.getText());
+                sql.append("AND `Total Revenue` <= ").append(max).append(" ");
+            }
+        } catch (NumberFormatException e) {
+            //showAlert;
+        }
+
+        try (Connection connection = DBConnection.getConnection();
+             Statement stmt = connection.createStatement();
+             ResultSet rs = stmt.executeQuery(sql.toString())) {
+            while (rs.next()) {
+                String date = rs.getDate("Date").toString();
+                Integer total = rs.getInt("Total Revenue");
+                Integer loss = rs.getInt("Cancellation Loss");
+                revenuelist.add(new RevenueModel(date, total, loss));
+            }
+            tableView.setItems(revenuelist);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
     private void loadRevenueData() {
