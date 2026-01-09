@@ -14,3 +14,7 @@
     -fx-font-weight: bold;
     -fx-background-radius: 5;
 }
+
+.hover:hover{
+    -fx-opacity: 0.45;
+}

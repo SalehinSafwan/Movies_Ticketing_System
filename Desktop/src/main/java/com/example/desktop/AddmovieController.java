@@ -24,13 +24,26 @@ public class AddmovieController {
         }
     }
 
-    @FXML private TextField title, duration;
+    @FXML private TextField title, duration, genreText;
     @FXML private DatePicker releaseDate;
     @FXML private ComboBox<String> genre;
+    @FXML private Button addGenre;
 
 
     @FXML public void initialize() {
-        genre.getItems().addAll("Action", "Comedy", "Drama", "Horror", "Romance", "Sci-Fi", "Thriller", "Period");
+        genre.getItems().clear();
+        addGenre.setOnAction(event -> {
+            String newItem = genreText.getText().trim();
+            if(!newItem.isEmpty() && !genre.getItems().contains(newItem)) {
+                genre.getItems().add(newItem);
+                genre.setValue(newItem);
+                genreText.clear();
+            }
+        });
+        duration.setTextFormatter(new TextFormatter<>(change -> {
+            if(change.getText().matches("[0-9]*")) return change;
+            return null;
+        }));
     }
 
     @FXML void AddMovie(ActionEvent event) {

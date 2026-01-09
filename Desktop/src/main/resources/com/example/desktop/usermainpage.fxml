@@ -13,19 +13,19 @@
 
     <top>
         <HBox alignment="CENTER" prefHeight="60" spacing="20">
-            <Label onMouseClicked="#showtimes" text="Showtimes">
+            <Label onMouseClicked="#showtimes" styleClass="hover" text="Showtimes">
             <HBox.margin>
                <Insets right="30.0" />
             </HBox.margin></Label>
-            <Label onMouseClicked="#buyTickets" text="Buy Tickets">
+            <Label onMouseClicked="#buyTickets" styleClass="hover" text="Buy Tickets">
             <HBox.margin>
                <Insets right="30.0" />
             </HBox.margin></Label>
-            <Label onMouseClicked="#CancelTicket" text="Cancel Ticket">
+            <Label onMouseClicked="#CancelTicket" styleClass="hover" text="Cancel Ticket">
             <HBox.margin>
                <Insets right="30.0" />
             </HBox.margin></Label>
-            <Label onMouseClicked="#verifyTickets" text="Verify Ticket" />
+            <Label onMouseClicked="#verifyTickets" styleClass="hover" text="Verify Ticket" />
         </HBox>
     </top>
 
@@ -35,7 +35,7 @@
             <padding>
                 <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
             </padding>
-            <Button onAction="#login" text="Admin Login">
+            <Button onAction="#login" styleClass="hover" text="Admin Login">
             <HBox.margin>
                <Insets />
             </HBox.margin></Button>
