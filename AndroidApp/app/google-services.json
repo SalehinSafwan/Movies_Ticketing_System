@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "131487723136",
+    "firebase_url": "https://movies-ticketing-system-default-rtdb.firebaseio.com",
+    "project_id": "movies-ticketing-system",
+    "storage_bucket": "movies-ticketing-system.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:131487723136:android:38345a3592a08c8e418065",
+        "android_client_info": {
+          "package_name": "com.example.androidapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-0Dq7fev-Z4zbIUYR91UIuJhVjvGI9dk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
