@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#14213d">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Username -->
+        <EditText
+            android:id="@+id/usernameField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100px"
+            android:background="#1b263b"
+            android:hint="Enter Username"
+            android:padding="12dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#BBBBBB" />
+
+        <!-- Movie selection -->
+        <Spinner
+            android:id="@+id/movieSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:prompt="@string/prompt_select_movie"
+            android:padding="12dp"
+            android:background="#1b263b"
+            android:layout_marginTop="12dp"/>
+
+        <!-- Date picker -->
+        <DatePicker
+            android:id="@+id/datePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:calendarViewShown="true"
+            android:layout_marginTop="12dp"/>
+
+        <!-- Showtime selection -->
+        <Spinner
+            android:id="@+id/showtimeSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:prompt="@string/prompt_select_showtime"
+            android:padding="12dp"
+            android:background="#1b263b"
+            android:layout_marginTop="12dp"/>
+
+        <!-- Seat layout -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seat Layout"
+            android:textColor="#fca311"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="8dp"/>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="horizontal">
+
+            <GridLayout
+                android:id="@+id/seatGrid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"/>
+        </HorizontalScrollView>
+
+        <!-- Legends -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp">
+
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Free" android:textColor="#00FF00" android:padding="8dp"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Booked" android:textColor="#FF0000" android:padding="8dp"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Selected" android:textColor="#FFFF00" android:padding="8dp"/>
+        </LinearLayout>
+
+        <!-- Selected seats table -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/selectedSeatsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="12dp"
+            android:background="#1b263b"/>
+
+        <!-- Total price -->
+        <TextView
+            android:id="@+id/totalPriceText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Price: 0"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:padding="12dp"/>
+
+        <!-- Confirm button -->
+        <Button
+            android:id="@+id/confirmButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirm Purchase"
+            android:textColor="#FFFFFF"
+            android:background="#00b4d8"
+            android:padding="12dp"
+            android:layout_marginTop="12dp"/>
+    </LinearLayout>
+</ScrollView>

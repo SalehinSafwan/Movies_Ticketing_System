@@ -22,6 +22,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".ShowtimesActivity" />
+        <activity android:name=".BuyTicketsActivity" />
+        <activity android:name=".ReceiptActivity"/>
+        <activity android:name=".CancelTicketActivity"/>
+        <activity android:name=".VerifyTicketActivity"/>
+
     </application>
 
 </manifest>

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Androidapp</string>
+    <string name="prompt_select_movie">Select Movie</string>
+    <string name="prompt_select_showtime">Select Showtime</string>
 </resources>

@@ -57,20 +57,19 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-//        buyTicketsLabel.setOnClickListener(v->{
-//            Intent intent = new Intent(MainActivity.this, BuyTicketsActivity.class);
-//            startActivity(intent);
-//        });
+        buyTicketsLabel.setOnClickListener(v->{
+            Intent intent = new Intent(MainActivity.this, BuyTicketsActivity.class);
+            startActivity(intent);
+        });
+        cancelTicketslabel.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, CancelTicketActivity.class);
+            startActivity(intent);
+        });
 
-//        cancelTicketsLabel.setOnClickListener(v -> {
-//            Intent intent = new Intent(MainActivity.this, CancelTicketsActivity.class);
-//            startActivity(intent);
-//        });
-
-//        verifyTicketsLabel.setOnClickListener(v -> {
-//            Intent intent = new Intent(MainActivity.this, VerifyTicketsActivity.class);
-//            startActivity(intent);
-//        });
+        verifyTicketslabel.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, VerifyTicketActivity.class);
+            startActivity(intent);
+        });
 
     }
 }

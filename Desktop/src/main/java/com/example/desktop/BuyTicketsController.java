@@ -82,7 +82,6 @@ public class BuyTicketsController extends ReceiptController{
             public void updateItem(LocalDate date, boolean empty) {
                 super.updateItem(date, empty);
                 LocalDate today = LocalDate.now();
-                setDisable(empty || date.isBefore(today) || date.isAfter(today.plusDays(1)));
             }
         });
     }

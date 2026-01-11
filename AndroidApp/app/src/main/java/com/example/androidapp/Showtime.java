@@ -5,9 +5,37 @@ public class Showtime {
     public String posterUrl;
     public String date;
     public String time;
+    public String showtimeId;
+    public String movieId;
+
+    public  int status;
     public String theatreName;
 
     public Showtime() {}
+
+    public String getShowtimeId() {
+        return showtimeId;
+    }
+
+    public void setShowtimeId(String showtimeId) {
+        this.showtimeId = showtimeId;
+    }
+
+    public String getMovieId() {
+        return movieId;
+    }
+
+    public void setMovieId(String movieId) {
+        this.movieId = movieId;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
 
     public Showtime(String movieTitle, String theatreName, String time, String date, String posterUrl) {
         this.movieTitle = movieTitle;

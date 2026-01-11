@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#18645A"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="450px"
+        android:elevation="6dp"
+        android:padding="20dp"
+        app:cardBackgroundColor="#307670"
+        app:cardCornerRadius="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/cancelTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="16dp"
+                android:text="❌ Cancel Ticket"
+                android:textColor="#e63946"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/cancelUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/edit_text"
+                android:hint="Enter Username"
+                android:padding="12dp"
+                android:textColor="#000000"
+                android:textColorHint="#888888" />
+
+            <EditText
+                android:id="@+id/cancelPNR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/edit_text"
+                android:hint="Enter PNR"
+                android:inputType="number"
+                android:padding="12dp"
+                android:textColor="#000000"
+                android:textColorHint="#888888" />
+
+            <Button
+                android:id="@+id/cancelButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#fca311"
+                android:text="Cancel Ticket"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

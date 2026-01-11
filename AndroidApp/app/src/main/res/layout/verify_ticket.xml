@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1b1b2f"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/verifyTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300px"
+        android:gravity="center"
+        android:paddingBottom="24dp"
+        android:text="🔎 Verify Ticket"
+        android:textColor="#fca311"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/verifyUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Username"
+        android:padding="12dp"
+        android:backgroundTint="#00b4d8"
+        android:textColor="#ffffff"
+        android:textColorHint="#aaaaaa"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/verifyPNR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter PNR"
+        android:padding="12dp"
+        android:backgroundTint="#00b4d8"
+        android:textColor="#ffffff"
+        android:textColorHint="#aaaaaa"
+        android:inputType="number"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/verifyButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Verify Ticket"
+        android:backgroundTint="#06d6a0"
+        android:textColor="#1b1b2f"
+        android:textStyle="bold"
+        android:padding="12dp"/>
+</LinearLayout>
