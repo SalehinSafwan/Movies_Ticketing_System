@@ -2,28 +2,70 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#14213d"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/titleText"
+
+    <LinearLayout
+        android:id="@+id/navBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50px"
+        android:layout_height="60dp"
+        android:layout_marginTop="100px"
+        android:background="#1b263b"
         android:gravity="center"
-        android:padding="16dp"
-        android:text="Available Movies"
-        android:textColor="#fca311"
-        android:textSize="22sp"
-        android:textStyle="bold" />
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/showtimesLabel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/nav_label_selector"
+            android:gravity="center"
+            android:text="Showtimes"
+            android:textColor="#C3B091"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/buyTicketsLabel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/nav_label_selector"
+            android:gravity="center"
+            android:text="Buy Tickets"
+            android:textColor="#C3B091"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/cancelTicketsLabel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/nav_label_selector"
+            android:gravity="center"
+            android:text="Cancel Tickets"
+            android:textColor="#C3B091"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/verifyTicketsLabel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/nav_label_selector"
+            android:gravity="center"
+            android:text="Verify Tickets"
+            android:textColor="#C3B091"
+            android:textSize="16sp" />
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/moviesRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="8dp"
-        android:scrollbars="vertical" />
+        android:scrollbars="vertical"/>
 </LinearLayout>

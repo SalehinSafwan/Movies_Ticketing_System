@@ -1,6 +1,9 @@
 package com.example.androidapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -14,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private MovieAdapter adapter;
     private List<Movie> movieList = new ArrayList<>();
     private DatabaseReference moviesRef;
+    private TextView showtimesLabel,buyTicketsLabel,cancelTicketslabel, verifyTicketslabel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,5 +47,30 @@ public class MainActivity extends AppCompatActivity {
                 // Handle error
             }
         });
+        showtimesLabel = findViewById(R.id.showtimesLabel);
+        buyTicketsLabel = findViewById(R.id.buyTicketsLabel);
+        cancelTicketslabel = findViewById(R.id.cancelTicketsLabel);
+        verifyTicketslabel = findViewById(R.id.verifyTicketsLabel);
+
+        showtimesLabel.setOnClickListener(v->{
+            Intent intent = new Intent(MainActivity.this, ShowtimesActivity.class);
+            startActivity(intent);
+        });
+
+//        buyTicketsLabel.setOnClickListener(v->{
+//            Intent intent = new Intent(MainActivity.this, BuyTicketsActivity.class);
+//            startActivity(intent);
+//        });
+
+//        cancelTicketsLabel.setOnClickListener(v -> {
+//            Intent intent = new Intent(MainActivity.this, CancelTicketsActivity.class);
+//            startActivity(intent);
+//        });
+
+//        verifyTicketsLabel.setOnClickListener(v -> {
+//            Intent intent = new Intent(MainActivity.this, VerifyTicketsActivity.class);
+//            startActivity(intent);
+//        });
+
     }
 }
